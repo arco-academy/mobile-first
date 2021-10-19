@@ -3,7 +3,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const ESLintPlugin = require("eslint-webpack-plugin");
 
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const StylelintPlugin = require("stylelint-webpack-plugin");
@@ -24,7 +23,7 @@ module.exports = {
 
   devServer: {
     hot: true,
-    port: 3000
+    port: 3000,
   },
 
   optimization: {
@@ -36,16 +35,8 @@ module.exports = {
 
   plugins: [
     new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "public"),
-          to: "public",
-        },
-      ],
-    }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src", "index.html"),
+      template: path.resolve(__dirname, "public", "index.html"),
     }),
     new StylelintPlugin({
       files: path.join("src", "**/*.s?(a|c)ss"),
@@ -71,15 +62,6 @@ module.exports = {
       {
         test: /\.html$/,
         loader: "html-loader",
-      },
-      {
-        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
-        use: {
-          loader: "file-loader",
-          options: {
-            name: "[path][name].[ext]",
-          },
-        },
       },
       {
         test: /\.s?(a|c)ss$/,
