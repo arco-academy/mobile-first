@@ -2,7 +2,7 @@
 
 ## CSS Moderno:
   - Supersets ( sass & scss );
-  - Unidades de medida (Pixel, em, rem);
+  - Unidades de medida (Pixel, em, rem, vh, vw);
   - CSS Flexbox;
   - CSS Grid;
 
@@ -12,6 +12,9 @@
   - Reutilizavel;
   - Manutenível;
 
+
+Objeto
+ -> Qualquer padrão visual que se repete e que pode ser transformado em um snippet independente
 
 ## Principios do OOCSS:
 
