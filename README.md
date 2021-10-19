@@ -1,11 +1,10 @@
-# CSS Moderno & os principios do OO CSS;
-
+# CSS Moderno & os principios do OOCSS;
 
 ## CSS Moderno:
   - Supersets ( sass & scss );
+  - Unidades de medida (Pixel, em, rem);
   - CSS Flexbox;
   - CSS Grid;
-
 
 ## Beneficios:
   - Código menor;
